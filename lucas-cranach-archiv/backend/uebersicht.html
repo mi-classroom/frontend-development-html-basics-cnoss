@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDA Backend</title>
+</head>
+
+<body>
+
+  <main>
+    <h1>CDA Backend</h1>
+
+    <section id="data-input">
+      <h2>Dateneingabe</h2>
+      <form action="/data/store.php">
+
+        <fieldset>
+          <legend>Abbildung vom Gemälde</legend>
+          <figure>
+            <img src="https://via.placeholder.com/450x350" alt="Uploaded Image">
+          </figure>
+          <input type="file" name="image" id="image" accept=".jpg,.jpeg,.png">
+        </fieldset>
+
+        <fieldset>
+          <legend>Allgemeine Daten</legend>
+
+          <label for="datierung">Datierung</label>
+          <input type="number" name="datierung" id="datierung" min="1472" max="1553">
+
+          <label for="eigentuemer">Eigentümer</label>
+          <input type="text" name="eigentuemer" id="eigentuemer">
+
+          <label for="besitzer">Besitzer</label>
+          <input type="text" name="besitzer" id="besitzer">
+
+          <label for="standort">Standort</label>
+          <input type="text" name="standort" id="standort">
+        </fieldset>
+
+        <fieldset>
+          <legend>Weitere Informationen</legend>
+
+          <label for="masse">Maße</label>
+          <textarea name="masse" id="masse" cols="30" rows="10">
+      </textarea>
+
+          <label for="kurzbeschreibung">Kurzbeschreibung</label>
+          <textarea name="kurzbeschreibung" id="kurzbeschreibung" cols="30" rows="10">
+      </textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Status</legend>
+          <label for="sichtbar">sichtbar</label>
+          <input type="radio" name="status" id="sichtbar">
+
+          <label for="unsichtbar">unsichtbar</label>
+          <input type="radio" name="status" id="unsichtbar">
+        </fieldset>
+
+        <fieldset>
+          <legend>Zuordnung zu Tour</legend>
+
+          <select name="tourzuordnung" id="tourzuordnung">
+        <option value="tour1">Staatsgalerie im Schloß Johannisburg</option>
+        <option value="tour2">Lorem ipsum dolor </option>
+        <option value="tour3">Sit amet consectetur adipisicing elit</option>
+        <option value="tour4">Nam commodi obcaecati quisquam</option>
+      </select>
+        </fieldset>
+      </form>
+
+    </section>
+
+    <section id="gemaeldeuebersicht">
+      <h2>Gemäldeübersicht</h2>
+      <table>
+        <caption>Übersicht über die einzelnen Gemälde und deren Zuordnung zu Touren.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Bezeichnung</th>
+            <th scope="col">Datierung</th>
+            <th scope="col">Tour</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Martyrium des hl. Erasmus</td>
+            <td>1516</td>
+            <td>Staatsgalerie im Schloss Johannisburg</td>
+          </tr>
+          <tr>
+            <td>Prager Retabel [Mitteltafel, Fragment]: Hl. Margaretha</td>
+            <td>kurz nach 1520</td>
+            <td>Staatsgalerie im Schloss Johannisbur</td>
+          </tr>
+          <tr>
+            <td>Hl. Hieronymus</td>
+            <td>um 1520</td>
+            <td>Staatsgalerie im Schloss Johannisburg</td>
+          </tr>
+          <tr>
+            <td>Triptychon mit der Heiligen</td>
+            <td>1509</td>
+            <td>Frankfurt, Städel Museum</td>
+          </tr>
+          <tr>
+            <td>Triptychon mit der Heiligen Sippe [Mitteltafel]</td>
+            <td>150</td>
+            <td>Frankfurt, Städel Museum</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>
